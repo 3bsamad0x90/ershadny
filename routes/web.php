@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+include __DIR__ . '/admin.php';
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Auth::routes();
+// Auth::routes();
