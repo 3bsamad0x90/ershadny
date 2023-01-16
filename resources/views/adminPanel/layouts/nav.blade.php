@@ -3,14 +3,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('admin.index') }}">
             <img src="{{ asset('images/logo2.png') }}" alt="image"/></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar-wd"
-          aria-controls="navbar-wd"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -42,15 +35,13 @@
         <!-- Example single danger button -->
         <a href="#"><img src="{{ asset('images/Untitled-1.png') }}" alt="" /></a>
         <div class="dropdown m-2">
-          <a class="btn btn-outline-primary dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false">
+          <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             مرحبا مشرف
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+            <li>
+                <a class="dropdown-item" href="#">تسجيل خروج</a>
+            </li>
           </ul>
         </div>
       </div>

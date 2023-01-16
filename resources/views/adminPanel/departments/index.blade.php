@@ -1,18 +1,18 @@
-@include('adminPanel.layouts.header')
+@include('AdminPanel.layouts.header')
   <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
     <!-- Start header -->
-    @include('adminPanel.layouts.nav')
+    @include('AdminPanel.layouts.nav')
     <!-- End header -->
     <div class="full" style="margin-top: 150px">
       <div class="heading_main text_align_center">
-        <h2><span>إدارة التخصصات</span></h2>
+        <h2><span>إدارة الأقسام</span></h2>
       </div>
     </div>
 
     <!-- section -->
     <div class="container-xxl py-5" id="">
       <div class="container">
-        <div class="row g-4 mb-5">
+        <div class="row g-4">
           <section class="section dashboard">
             <div class="row">
               <!-- Left side columns -->
@@ -27,16 +27,9 @@
                     >
                       <div class="col-12 text-center">
                         <br />
-                        <h5
-                          class="card-title"
-                          style="font-size: 30px; font-weight: bold"
-                        >
-                          <button
-                            class="btn btn-outline-primary"
-                            data-bs-toggle="modal"
-                            data-bs-target="#admin-depart"
-                          >
-                            إضافة تخصص
+                        <h5 class="card-title" style="font-size: 30px; font-weight: bold">
+                          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#admin-special">
+                            إضافة قسم
                           </button>
                         </h5>
                       </div>
@@ -51,19 +44,16 @@
                     >
                       <thead style="background-color: #0d6efd" dir="rtl">
                         <tr style="text-align: right !important">
-                          <th
-                            style="width: 2%; color: white; text-align: center"
-                          >
+                          <th style="width: 2%; color: white; text-align: center">
                             رقم
                           </th>
-                          <th
-                            style="width: 10%; color: white; text-align: center"
-                          >
+                          <th style="width: 10%; color: white; text-align: center">
                             التخصص
                           </th>
-                          <th
-                            style="width: 7%; color: white; text-align: center"
-                          >
+                          <th style="width: 10%; color: white; text-align: center">
+                            القسم
+                          </th>
+                          <th style="width: 7%; color: white; text-align: center">
                             التحكم
                           </th>
                         </tr>
@@ -72,19 +62,20 @@
                         <tr>
                           <td scope="col">1</td>
                           <td scope="col">كلية إدارة أعمال</td>
+                          <td scope="col">إدارة عامة</td>
                           <td scope="col">
                             <button
                               data-bs-toggle="modal"
                               data-bs-target=""
-                              class="btn btn-danger"
-                            >
+                              class="btn btn-danger">
                               حذف <i class="fa-solid fa-trash"></i>
                             </button>
                           </td>
                         </tr>
                         <tr>
                           <td scope="col">2</td>
-                          <td scope="col">كلية الأداب</td>
+                          <td scope="col">كلية إدارة أعمال</td>
+                          <td scope="col">نظم معلومات إدارية</td>
                           <td scope="col">
                             <button
                               data-bs-toggle="modal"
@@ -97,20 +88,8 @@
                         </tr>
                         <tr>
                           <td scope="col">3</td>
-                          <td scope="col">كلية العلوم التطبيقية</td>
-                          <td scope="col">
-                            <button
-                              data-bs-toggle="modal"
-                              data-bs-target=""
-                              class="btn btn-danger"
-                            >
-                              حذف <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="col">4</td>
-                          <td scope="col">كلية العلوم</td>
+                          <td scope="col">كلية إدارة أعمال</td>
+                          <td scope="col">محاسبة مالية</td>
                           <td scope="col">
                             <button
                               data-bs-toggle="modal"
@@ -140,7 +119,7 @@
     <div
       class="modal fade mt-4"
       style="height: 70vh"
-      id="admin-depart"
+      id="admin-special"
       tabindex="-1"
       aria-labelledby="admin-depart"
       aria-hidden="true"
@@ -148,7 +127,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="admin-depart">إضافة تخصص جديد</h1>
+            <h1 class="modal-title fs-5" id="admin-depart">إضافة قسم</h1>
             <button
               type="button"
               class="btn-close"
@@ -159,10 +138,19 @@
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="depart" class="col-form-label"
-                  >أدخل إسم التخصص :
+                <label for="depart"> اختر التخصص:</label>
+                <select class="form-select" name="depart" id="depart">
+                  <option value="1">كلية إدارة أعمال</option>
+                  <option value="2">كلية الأداب</option>
+                  <option value="3">كلية العلوم التطبيقية</option>
+                  <option value="4">كلية العلوم</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="special" class="col-form-label"
+                  >أدخل إسم القسم :
                 </label>
-                <input type="text" class="form-control" id="depart" />
+                <input type="text" class="form-control" id="special" />
               </div>
             </form>
           </div>
@@ -181,4 +169,5 @@
     </div>
 
     <!-- End Modal -->
-    @include('AdminPanel.layouts.footer')
+@include('AdminPanel.layouts.footer')
+

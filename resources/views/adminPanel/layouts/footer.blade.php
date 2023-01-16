@@ -8,9 +8,7 @@
     </div>
   </div>
 
-  <a href="#" id="scroll-to-top" class="hvr-radial-out"
-    ><i class="fa fa-angle-up"></i
-  ></a>
+  <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
   <!-- ALL JS FILES -->
   <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -67,5 +65,15 @@
       ],
     });
   </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#success-alert").hide();
+            $("#myWish").reload(function showAlert() {
+                $("#success-alert").fadeTo(6000, 500).slideUp(500, function() {
+                $("#success-alert").slideUp(5000, 500);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
