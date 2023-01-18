@@ -9,7 +9,6 @@
   </div>
 
   <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
-
   <!-- ALL JS FILES -->
   <script src="{{ asset('js/jquery.min.js') }}"></script>
   <script src="{{ asset('js/popper.min.js') }}"></script>
@@ -64,7 +63,7 @@
         { searchable: true, targets: 7 },
       ],
     });
-  </script>
+    </script>
     <script type="text/javascript">
         $(document).ready(function() {
             $("#success-alert").hide();

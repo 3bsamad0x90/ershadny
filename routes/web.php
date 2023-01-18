@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\users\DoctorController;
 use Illuminate\Support\Facades\Route;
 
 include __DIR__ . '/admin.php';
@@ -18,3 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Auth::routes();
+
+Route::group(['prefix'=> '/'], function(){
+    Route::get('doctor', [DoctorController::class, 'index'])->name('doctor.index');
+    Route::get('doctor-details/{doctor}', [DoctorController::class, 'details'])->name('doctor.doctor-details');
+});

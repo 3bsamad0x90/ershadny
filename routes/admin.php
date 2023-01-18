@@ -11,7 +11,6 @@ route::group(['prefix'=>'AdminPanel'],function(){
     Route::get('/', [AdminPanelController::class, 'index'])->name('admin.index');
     Route::get('/appointemnts', [AppointemntController::class, 'index'])->name('admin.appointemnts');
    
-
     //specializations التخصصات
     Route::group(['prefix'=>'specializations'],function(){
         Route::get('/', [SpecializationController::class, 'index'])->name('admin.specializations');

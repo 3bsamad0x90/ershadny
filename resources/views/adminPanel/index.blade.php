@@ -1,8 +1,35 @@
-@include('adminPanel.layouts.header')
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <!-- Basic -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <!-- Site Metas -->
+    <title>إرشدنى</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{{ asset('css/pogo-slider.min.css') }}" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}" />
+  </head>
 
   <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
     <!-- Start header -->
-    @include('adminPanel.layouts.nav')
+   @include('adminPanel.layouts.nav')
     <!-- End header -->
 
     <!-- Start Banner -->
@@ -121,43 +148,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="section tabbar_menu">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="tab_menu">
-              <div class="full">
-                <div class="heading_main text_align_center">
-                  <h2><span>الأقسام </span></h2>
-                </div>
-              </div>
-              <div class="box-content">
-                <div class="card card-box" style="width: 18rem;height: 280px;">
-                  <div class="card-body text-center card-body-edit">
-                    <h2 class="card-subtitle mb-5 mt-5 btn btn-primary  "> إدارة عامة</h2>
-                    <a href="Doctor-mange.html"><button class="btn btn-primary">عرض الدكاترة</button></a>
-                  </div>
-                  <div class="overlay"></div>
-                </div>
-                <div class="card card-box" style="width: 18rem;height: 280px;">
-                  <div class="card-body text-center card-body-edit">
-                    <h2 class="card-subtitle mb-5 mt-5 btn btn-primary  ">نظم معلومات إدارية</h2>
-                    <a href="Doctor-short.html"><button class="btn btn-primary">عرض الدكاترة</button></a>
-                  </div>
-                </div>
-                <div class="card card-box" style="width: 18rem;height: 280px;">
-                  <div class="card-body text-center card-body-edit">
-                    <h2 class="card-subtitle mb-5 mt-5 btn btn-primary  ">محاسبة مالية</h2>
-                    <a href="Doctor-short.html"><button class="btn btn-primary">عرض الدكاترة</button></a>
-                  </div>
-                </div>
-
-              </div>
-              <a class="align-self-center p-3" href="depart.html"><button class="btn btn-outline-primary">جميع الأقسام</button></a>
-            </div>
-        </div>
-      </div>
-    </div> -->
     <!-- end section -->
     <!-- section -->
     <div class="section layout_padding">
@@ -392,7 +382,7 @@
             </div>
           </div>
         </div>
-        <a class="align-self-center p-3" href="Doctor.html"
+        <a class="align-self-center p-3" href="{{ route('doctor.index') }}"
           ><button class="btn btn-outline-primary">جميع الدكاتره</button></a
         >
       </div>
@@ -417,18 +407,19 @@
     ></a>
 
     <!-- ALL JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- ALL PLUGINS -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.pogo-slider.min.js"></script>
-    <script src="js/slider-index.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/images-loded.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.pogo-slider.min.js') }}"></script>
+    <script src="{{ asset('js/slider-index.js') }}"></script>
+    <script src="{{ asset('js/smoothscroll.js') }}"></script>
+    <script src="{{ asset('js/form-validator.min.js') }}"></script>
+    <script src="{{ asset('js/contact-form-script.js') }}"></script>
+    <script src="{{ asset('js/isotope.min.js') }}"></script>
+    <script src="{{ asset('js/images-loded.min.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
   </body>
 </html>
